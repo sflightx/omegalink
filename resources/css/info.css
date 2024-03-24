@@ -1,0 +1,253 @@
+body {
+    background: black;
+    margin: 0;
+    padding:0;
+    font-family: Arial, sans-serif; /* Set the preferred font */
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 240px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.welcome {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/sfs-bp-store.appspot.com/o/static%2Flogo%2Fstarship-superheavy-olm.jpeg?alt=media&token=bd82be51-9841-4192-a217-b36788856ba3');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: calc(100vw - 20px); /* 100vw - 20px for left and right padding */
+    height: calc(90vh - 20px); /* 100vh - 20px for top and bottom padding */
+    padding: 10px; /* 10px padding on all sides */
+}
+
+.welcome h1 {
+    margin: 10px; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    position: absolute;
+    bottom: 100px; /* Adjust as needed */
+    left: 10px; /* Adjust left position */
+}
+
+.welcome h5 {
+    margin: 10px; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    position: absolute;
+    bottom: 50px; /* Adjust as needed */
+    left: 10px; /* Adjust left position */
+    color:#a0a0a0
+}
+
+.launches, .blueprint {
+    padding: 50px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 8px;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Center align vertically*/
+    transition: top 0.3s; /* Adding transition for smooth hide/show effect */
+    z-index: 2;
+}
+
+.header-hide {
+    top: -100px; /* Moves the header off-screen when scrolled down */
+}
+
+header img {
+
+    display: block;
+    max-height: 100%; /* Adjust as needed */
+    max-width: 100%; /* Adjust as needed */
+}
+
+.menuImage {
+    max-height: 75%;
+    max-width: 15vw;
+}
+
+.profileImage {
+    right: 0px;
+}
+
+main {
+    flex: 1;
+    padding: 0vw;
+    /* Additional styles for main content if needed */
+}
+
+nav {
+    position: fixed;
+    width: 80vw;
+    height: 8vh; /* Adjust the height as needed */
+    background: #2f2f2f;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; /* Ensure the ul takes the full height of the nav */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: auto; /* Automatic padding */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.grid-container {
+    
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px; /* Adjust spacing between grid items */
+}
+
+.grid-item {
+    border: 1px solid #ccc; /* Optional border for visualization */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.see-more {
+    text-decoration: none;
+    color: darkturquoise;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.see-more span {
+    margin-left: 5px;
+}
+
+.launch-date {
+  font-style: italic;
+  color: #555;
+}
+
+* {
+    font-family: 'Barlow Condensed';
+    padding: 0px;
+}
+
+footer {
+    color: white;
+    padding: 4vh;
+    bottom: 0;
+    width: 75vw;
+    margin: 0px auto;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.data-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin: 0 auto;
+}
+
+.data-item {
+  position: relative;
+  width: 80vw; /* Set width to 80vw */
+  height: 50vh; /* Set height to 50vh */
+  margin: 20px; /* Adjust margin as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.data-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Ensure the image is centered */
+}
+
+.data-item h2 {
+  margin: 0; /* Remove default margin */
+  background-color: rgba(255, 255, 255, 0); /* Adjust as needed */
+  padding: 20px; /* Adjust as needed */
+}
+
+/* Add styling for the multiple items case */
+.data-container.scrollable .data-item {
+  flex: 0 0 auto; /* Allow items to have natural width */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button, .details-button {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0);
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover, .details-button:hover {
+    background-color: #2980b9; /* You can change the hover color */
+}
