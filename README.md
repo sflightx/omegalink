@@ -1,2 +1,0 @@
-# omegalink
-OmegaLink repository
