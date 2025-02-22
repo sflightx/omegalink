@@ -17,75 +17,103 @@
     <meta name="twitter:image"
         content="https://firebasestorage.googleapis.com/v0/b/sfs-bp-store.appspot.com/o/static%2Flogo%2FScreenshot_20240204-195015.jpg?alt=media&token=8d3ddf42-30c0-45c7-85a8-1f48974b15fa">
 
-    <title>Spaceflight Exploration</title>
-    <link rel="stylesheet" href="resources/css/info.css">
-    <link rel="stylesheet" href="https://sflightx.github.io/resources/css/design.css">
+    <title>OmegaLink | sFlightX</title>
+    <link rel="stylesheet" href="../resources/main/import.css">
+    <link rel="stylesheet" href="../resources/main/secondary-layout.css">
+    <link rel="stylesheet" href="../resources/main/primary-layout.css">
 </head>
 
 <body>
     <header>
-        <img src="https://firebasestorage.googleapis.com/v0/b/sfs-bp-store.appspot.com/o/static%2Flogo%2Fsflightx.png?alt=media&token=db006a50-7f5e-4cad-ab84-efe0df59d08c"
-            alt="sFlight X Logo">
-        
+        <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" ></a>
+        <ul id="nav_list">
+            <li><a href="https://sflightx.com/launches"><b>LAUNCHES</b></a><p></p></li>
+            <li><a href="https://sflightx.com/vehicle/maya"><b>MAYA</b></a><p></p></li>
+            <li><a href="https://sflightx.com/vehicle/maya-heavy"><b>MAYA HEAVY</b></a><p></p></li>
+            <li><a href="https://sflightx.com/vehicle/stellar"><b>STELLAR</b></a><p></p></li>
+            <li><a href="https://omegalink.sflightx.com/"><b>OMEGALINK</b></a><p></p></li>
+            <li><a href="https://sflightx.com/missions"><b>MISSIONS</b></a><p></p></li>
+        </ul>
+        <span class="material-symbols-outlined" id="menu">menu</span>
     </header>
     <main>
         <!-- Content of the main section -->
-        <div class="welcome">
-            <h1>OMEGALINK</h1>
-            <p>OmegaLink is a sattelite constellation that provides low-latency communications from any point of Earth</p>
+        <div class="banner-full" style="background-image: url('https://i.imgur.com/YBF74SD.jpeg');">
+            <h1>OmegaLink</h1>
+            <p id="banner-title">OmegaLink is a sattelite constellation that provides low-latency communications from any point of Earth</p>
         </div>
-        <div class="sat-data">
+        <div class="banner-stat">
             <h1>OmegaLink Statistics</h1>
             <h6>Data as of April 26, 2024</h6>
-            <div class="sat-data-container">
-                <div class="sat-data-child"><p>102</p><h4>OmegaSats Launched</h4></div>
-                <div class="sat-data-child"><p>2</p><h4>OmegaSats Decommisioned</h4></div>
-                <div class="sat-data-child"><p>98</p><h4>OmegaSats Operational</h4></div>
-                <div class="sat-data-child"><p>2</p><h4>OmegaSats Reentered</h4></div>  
+            <div class="banner-stat-container">
+                <div class="banner-stat-child"><p>203</p><h2>OmegaSats Launched</h2></div>
+                <div class="banner-stat-child"><p>2</p><h2>OmegaSats Decommisioned</h2></div>
+                <div class="banner-stat-child"><p>201</p><h2>OmegaSats Operational</h2></div>
+                <div class="banner-stat-child"><p>2</p><h2>Total Landings</h2></div>  
             </div>
-            
-            
         </div>
-        <div class="launches">
+        <div id="launches" class="banner-stat">
             <h1> Upcoming Launches</h1>
+            <div id="scroll-grid" class="grid-container"></div>
         </div>
-        <div id="loading-container" class="loading-container">
-            <p>Loading...</p>
-        </div>
+        
         <div id="data-container" class="data-container">
             <!-- Data items will be appended here -->
         </div>
-
-        <div class="grid-container">
-            <div class="grid-item">
-                <h2>Low Latency Live Streaming</h2>
-                <p>OmegaSats can provide ultra high speed livestreams of our launches.</p>
+        
+        <div class="banner" id="banner-info">
+            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center." class="banner-img">
+            <div class="banner-div">
+                <h1 id="banner-title">Low Latency Live Streaming</h1>
+                <p id="subtext">OmegaSats can provide ultra high speed livestreams of our launches.</p>
+                <button onclick="window.location.href='https://sflightx.com/missions?id=sky-shield-reaction-mission';"><h4><b>Learn More</b></h4></button>
             </div>
-            <!-- Repeat for more grid items -->
-            <!-- Another grid item -->
-            <div class="grid-item">
-                <h2>Help Starting Virtual Companies</h2>
-                <p>You can also launch our OmegaSats to space! It's free and you can add this to your livestreams!</p>
+        </div>
+        <div class="banner" id="banner-info">
+            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center." class="banner-img">
+            <div class="banner-div">
+                <h1 id="banner-title">Help Starting Virtual Companies</h1>
+                <p id="subtext">You can also launch our OmegaSats to space! It's free and you can add this to your livestreams!</p>
+                <button onclick="window.location.href='https://sflightx.com/missions?id=sky-shield-reaction-mission';"><h4><b>Learn More</b></h4></button>
             </div>
-            <div class="grid-item">
-                <h2>Excitement Guaranteed</h2>
-                <p>Many companies are now launcing OmegaSats! Be one them today!</p>
+        </div>
+        <div class="banner" id="banner-info">
+            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center." class="banner-img">
+            <div class="banner-div">
+                <h1 id="banner-title">Excitement Guaranteed</h1>
+                <p id="subtext">Many companies are now launcing OmegaSats! Be one them today!</p>
+                <button onclick="window.location.href='https://sflightx.com/missions?id=sky-shield-reaction-mission';"><h4><b>Learn More</b></h4></button>
             </div>
-            <div class="grid-item">
-                <h2>Support Spaceflight Exploration</h2>
-                <p>Any amount are very helpful to me and I appreciate it!</p>
+        </div>
+        <div class="banner" id="banner-info">
+            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center." class="banner-img">
+            <div class="banner-div">
+                <h1 id="banner-title">Support sFlightX</h1>
+                <p id="subtext">Any amount are very helpful to me and we appreciate it!</p>
+                <button onclick="window.location.href='https://sflightx.com/missions?id=sky-shield-reaction-mission';"><h4><b>Learn More</b></h4></button>
             </div>
-            <div class="grid-item">
-                <h2>Book A Mission</h2>
-                <p>Let us know your rocket launching into space using our OmegaSats. We will negotiate further. It is
-                    totally free! No hidden fees.</p>
+        </div>
+        <div class="banner" id="banner-info">
+            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center." class="banner-img">
+            <div class="banner-div">
+                <h1 id="banner-title">Book a Contract!</h1>
+                <p id="subtext">Let us know your rocket launching into space using our OmegaSats. We will negotiate further. It is totally free! No hidden fees.</p>
+                <button onclick="window.location.href='https://sflightx.com/missions?id=sky-shield-reaction-mission';"><h4><b>Learn More</b></h4></button>
             </div>
         </div>
     </main>
-    <footer>
-        <h2>We're working something new with the website. Stay Tuned!</h2>
-        <p>© 2021-2024 Spaceflight Exploration</p>
-        <p><a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></p>
+    <footer id="footer">
+        <div>
+            <p>© 2021-2024 Spaceflight Exploration</p>
+            <p><a href="https://sflightx.com/legal/terms.html">Terms of Use</a> | <a href="https://sflightx.com/legal/privacy_policy.html">Privacy Policy</a></p>
+        </div>
+        <div id="footer-link">
+            <a href="https://x.com/SFlightXJNO"><img src="https://img.icons8.com/?size=100&id=Q33YQBzI2lZs&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://youtube.com/@sflightx"><img src="https://img.icons8.com/?size=100&id=85162&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://facebook.com/sflightx"><img src="https://img.icons8.com/?size=100&id=85126&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://bsky.app/profile/sflightx.com"><img src="https://img.icons8.com/?size=100&id=MGqlXOe8ksH0&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://simplerockets.com/u/sflightx"><img src="https://img.icons8.com/?size=100&id=COgXDnufRVRP&format=png&color=FFFFFF" class="footer-link-img"></a>
+        </div>
     </footer>
 
     <!-- Firebase SDK -->
@@ -93,5 +121,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="../resources/main/init.js"></script>
+    <script src="../resources/launches/retrieve.js"></script>
+    <script src="../resources/auth/authentication.js"></script>
 </body>
 </html>
