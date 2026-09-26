@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="version" content="0.3">
-    <meta name="version_date" content="5-11-2024">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-    <meta name="description" content="OmegaLink by sFlightX">
-    <meta property="og:image"
-        content="https://firebasestorage.googleapis.com/v0/b/sfs-bp-store.appspot.com/o/static%2Flogo%2FScreenshot_20240204-195015.jpg?alt=media&token=8d3ddf42-30c0-45c7-85a8-1f48974b15fa" />
-    <meta property="og:url" content="sflightx.github.io/omegalink/info.html" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@sFlightX" />
-    <meta name="twitter:title" content="OmegaLink - Home" />
-    <meta name="twitter:description"
-        content="OmegaLink is a sattelite constellation that provides low-latency communications from any point of Earth" />
-    <meta name="twitter:image"
-        content="https://firebasestorage.googleapis.com/v0/b/sfs-bp-store.appspot.com/o/static%2Flogo%2FScreenshot_20240204-195015.jpg?alt=media&token=8d3ddf42-30c0-45c7-85a8-1f48974b15fa">
+    <meta name="version" content="1.1">
+    <meta name="author" content="SFlightX">
+    <meta name="version_date" content="6-13-2025">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OmegaLink by SFlightX - Satellite constellation providing low-latency communications globally.">
+    <meta property="og:image" content="https://sflightx.com/resources/v4/database/logo/logo.png">
+    <meta property="og:url" content="https://omegalink.sflightx.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SFlightXJNO">
+    <meta name="twitter:title" content="OmegaLink | SFlightX">
+    <meta name="twitter:description" content="OmegaLink is a satellite constellation that provides low-latency communications from any point of Earth.">
+    <meta name="twitter:image" content="https://sflightx.com/resources/v4/database/logo/logo.png">
 
-    <title>OmegaLink | sFlightX</title>
+    <title>OmegaLink | SFlightX</title>
+    <link rel="icon" type="image/png" href="https://sflightx.com/resources/v4/database/logo/logo.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3847112193670696" crossorigin="anonymous"></script>
+
     <script type="importmap">
     {
       "imports": {
@@ -31,157 +37,320 @@
         import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+
+    <link rel="stylesheet" href="https://sflightx.com/resources/v4/dependency.css">
+
     <style>
-        #cover {
+        body {
+            font-family: 'Outfit', 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        sflightx-footer a,
+        footer a,
+        footer #legal-link a {
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+        }
+
+        #side-sheet {
+            transform: none;
+        }
+
+        #navItems {
+            padding: 1rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        #side-sheet md-list {
+            background: transparent;
+            --md-list-container-color: transparent;
+            --md-list-item-label-text-color: #fff;
+            --md-list-item-supporting-text-color: #9ca3af;
+        }
+
+        main {
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #cover {
+            position: relative;
+            display: flex;
             align-items: center;
-            justify-content: space-around;
-            text-align: center;
-            height: 75vh;
-            background-image: url('https://sflightx.com/resources/static/athena/athena_cover.png');
+            min-height: 85vh;
+            padding: 7.5rem 1.5rem 4rem;
+            color: #fff;
+            background-image:
+                linear-gradient(rgba(10, 13, 20, 0.62), rgba(10, 13, 20, 0.82)),
+                url('https://sflightx.com/resources/static/athena/athena_cover.png');
             background-size: cover;
             background-position: center;
-            background-color: rgba(0, 0, 0, 0.75);
-            background-blend-mode: overlay;
         }
 
-        #grid .container>*,
-        #info {
+        .cover-inner {
             width: 100%;
-            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
         }
 
-        #grid {
-            text-align: center;
+        .cover-kicker {
+            display: inline-flex;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(170, 199, 255, 0.35);
+            background: rgba(65, 95, 145, 0.25);
+            color: var(--md-sys-color-primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
         }
-        [desktop-gap] > * {
-            margin: 16px 0px;
+
+        .cover-inner h1 {
+            margin: 0;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 0.95;
+        }
+
+        .cover-inner p {
+            margin: 0;
+            max-width: 36rem;
+            font-size: 1.1rem;
+            line-height: 1.65;
+            color: rgba(226, 226, 233, 0.86);
+        }
+
+        .stats {
+            width: min(1100px, calc(100% - 2.5rem));
+            margin: 0 auto;
+            padding: 3.5rem 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem 2rem;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: clamp(2.4rem, 4vw, 3.4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            color: var(--md-sys-color-primary);
+        }
+
+        .stat span {
+            display: block;
+            margin-top: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .stats-note {
+            width: min(1100px, calc(100% - 2.5rem));
+            margin: 0 auto 2.5rem;
+            font-size: 0.85rem;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .contract {
+            width: min(1100px, calc(100% - 2.5rem));
+            margin: 0 auto 4.5rem;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contract img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contract-copy h2 {
+            margin: 0 0 0.85rem;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .contract-copy p {
+            margin: 0 0 1.5rem;
+            line-height: 1.65;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        @media (max-width: 968px) {
+            #cover {
+                min-height: 100svh;
+                padding: 6.5rem 1.15rem 3rem;
+                text-align: center;
+            }
+
+            .cover-inner {
+                align-items: center;
+            }
+
+            .cover-inner p {
+                max-width: 100%;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                width: calc(100% - 2.3rem);
+                padding-top: 2.5rem;
+                gap: 1.75rem 1.25rem;
+            }
+
+            .stat {
+                text-align: center;
+            }
+
+            .stats-note,
+            .contract {
+                width: calc(100% - 2.3rem);
+            }
+
+            .stats-note {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .contract {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .contract img {
+                height: 220px;
+                border-radius: 1.15rem;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://sflightx.com/resources/v4/element/material-dependency.css" />
-</head>
 </head>
 
 <body>
     <div id="side-sheet">
         <div id="side-sheet-header">
-            <h3 class="md-typescale-headline-small">SFlightX</h3>
+            <h3 class="md-typescale-headline-small" style="font-weight: 700; color: #fff;">SFlightX</h3>
             <span class="material-symbols-rounded" onclick="toggleSideSheet()">close</span>
         </div>
         <nav id="navItems"></nav>
     </div>
-    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleSideSheet()"></div>
+
+    <div id="locItems" hidden></div>
+    <div id="backdrop" class="fixed inset-0 z-30 hidden" onclick="toggleSideSheet()"></div>
+
     <header>
         <div class="logo">
             <span class="material-symbols-rounded" onclick="toggleSideSheet()" id="menu">menu</span>
             <a href="https://sflightx.com">
-                <img src="https://sflightx.com/resources/v4/database/logo/logo.png" alt="sFlightX Logo" />
+                <img src="https://sflightx.com/resources/v4/database/logo/logo.png" alt="sFlightX Logo">
             </a>
         </div>
-        <div style="display: flex; gap: 1rem;">
-            <!--md-outlined-button href="https://auth.sflightx.com" style="margin: 8px 0px;"
-                class="md-typescale-title-small">Log In</md-outlined-button-->
-            <label><span class="material-symbols-rounded">dark_mode</span><md-switch
-                    id="themeToggle"></md-switch></label>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <span class="material-symbols-rounded">dark_mode</span>
+                <md-switch id="themeToggle"></md-switch>
+            </label>
         </div>
     </header>
+
     <main>
-        <!-- Content of the main section -->
-        <div indent="all" id="cover">
-            <h1 class="md-typescale-display-large">OmegaLink</h1>
-            <p class="md-typescale-body-large">OmegaLink is a sattelite constellation that provides low-latency
-                communications from any point of Earth.</p>
-        </div>
-        <div id="grid" stat>
-            <div class="container" indent="all" transparent>
-                <h1 class="md-typescale-display-large">250</h1>
-                <h4 class="md-typescale-title-large">OmegaSats Launched</h4>
+        <section id="cover">
+            <div class="cover-inner">
+                <span class="cover-kicker">Constellation</span>
+                <h1>OmegaLink</h1>
+                <p>A satellite constellation providing low-latency communications from any point on Earth.</p>
+                <md-filled-tonal-button href="https://forms.gle/xexM6DfVhLi3WDQ97" target="_blank">
+                    Book a Contract
+                </md-filled-tonal-button>
             </div>
-            <div class="container" indent="all" transparent>
-                <h1 class="md-typescale-display-large">1</h1>
-                <h4 class="md-typescale-title-large">OmegaSats Decommisioned</h4>
+        </section>
+
+        <section class="stats" aria-label="OmegaSat statistics">
+            <div class="stat">
+                <strong>250</strong>
+                <span>OmegaSats launched</span>
             </div>
-            <div class="container" indent="all" transparent>
-                <h1 class="md-typescale-display-large">14</h1>
-                <h4 class="md-typescale-title-large">OmegaSats Operational</h4>
+            <div class="stat">
+                <strong>1</strong>
+                <span>Decommissioned</span>
             </div>
-            <div class="container" indent="all" transparent>
-                <h1 class="md-typescale-display-large">2</h1>
-                <h4 class="md-typescale-title-large">Total Landings</h4>
+            <div class="stat">
+                <strong>14</strong>
+                <span>Operational</span>
             </div>
-        </div>
+            <div class="stat">
+                <strong>2</strong>
+                <span>Total landings</span>
+            </div>
+        </section>
+        <p class="stats-note">Data as of June 13, 2025</p>
+
+        <section class="contract">
+            <img src="https://sflightx.com/resources/v4/database/image/sflightx_com/qS1262v.png" alt="Maya liftoff">
+            <div class="contract-copy">
+                <h2>Book a contract</h2>
+                <p>Flying a rocket? Use OmegaSats on the ride. We’ll negotiate from there — free, with no hidden fees.</p>
+                <md-filled-tonal-button href="https://forms.gle/xexM6DfVhLi3WDQ97" target="_blank">
+                    Learn more
+                </md-filled-tonal-button>
+            </div>
+        </section>
+
         <div desktop-gap>
-            <div class="container" shape="rounded" indent="all">
-                <h4 class="md-typescale-body-large" indent="all">Data as of June 13, 2025</h4>
-            </div>
-            <div class="container" indent="all" shape="rounded">
-                <img src="https://sflightx.com/resources/v4/database/image/sflightx_com/qS1262v.png" alt="Maya Liftoff">
-                <div id="info">
-                    <h4 class="md-typescale-headline-large">Book a Contract!</h4>
-                    <p class="md-typescale-body-medium" indent="vertical">Let us know your rocket launching into space
-                        using our OmegaSats. We will negotiate
-                        further. It is totally free! No hidden fees.</p>
-                    <md-filled-button href="https://forms.gle/xexM6DfVhLi3WDQ97" target="_blank">Learn
-                        More</md-filled-button>
-                </div>
-            </div>
+            <sflightx-footer></sflightx-footer>
         </div>
-        <!--div id="launches" class="banner-stat">
-            <h1> Upcoming Launches</h1>
-            <div id="scroll-grid" class="grid-container"></div>
-        </div>
-
-        <div id="data-container" class="data-container">
-        </div>
-
-        <div class="banner" id="banner-info">
-            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center."
-                class="banner-img">
-            <div class="banner-div">
-                <h1 id="banner-title">Low Latency Live Streaming</h1>
-                <p id="subtext">OmegaSats can provide ultra high speed livestreams of our launches.</p>
-            </div>
-        </div>
-        <div class="banner" id="banner-info">
-            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center."
-                class="banner-img">
-            <div class="banner-div">
-                <h1 id="banner-title">Help Starting Virtual Companies</h1>
-                <p id="subtext">You can also launch our OmegaSats to space! It's free and you can add this to your
-                    livestreams!</p>
-            </div>
-        </div>
-        <div class="banner" id="banner-info">
-            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center."
-                class="banner-img">
-            <div class="banner-div">
-                <h1 id="banner-title">Excitement Guaranteed</h1>
-                <p id="subtext">Many companies are now launcing OmegaSats! Be one them today!</p>
-                <button onclick="window.location.href='https://forms.gle/xexM6DfVhLi3WDQ97';">
-                    <h4><b>Learn More</b></h4>
-                </button>
-            </div>
-        </div>
-        <div class="banner" id="banner-info">
-            <img src="https://i.imgur.com/86aRvan.png" alt="Launch Complex C, at Bataan Space Center."
-                class="banner-img">
-            <div class="banner-div">
-                <h1 id="banner-title">Support sFlightX</h1>
-                <p id="subtext">Subscribe to our YouTube channel to get launch updates.</p>
-                <button onclick="window.location.href='https://sflightx.com?link=youtube';">
-                    <h4><b>Learn More</b></h4>
-                </button>
-            </div>
-        </div-->
-        <sflightx-footer></sflightx-footer>
     </main>
-    <script src="https://sflightx.com/resources/v4/dependency.js"></script>
-    <script type="module">
-        import { renderNavigation } from 'https://sflightx.com/resources/v4/data/drawer/nav-loader.js';
-        import { navData } from 'https://sflightx.com/resources/v4/data/drawer/sflightx_com/index.js';
-        renderNavigation(navData);
-    </script>
-</body>
 
+    <script src="https://sflightx.com/resources/v4/dependency.js"></script>
+    <script type="module">
+        import { renderNavigation } from 'https://sflightx.com/resources/v4/data/drawer/nav-loader.js';
+        import { navData } from 'https://sflightx.com/resources/v4/data/drawer/sflightx_com/index.js';
+
+        try {
+            renderNavigation(navData);
+        } catch (e) {
+            console.error('Navigation drawer failed to load', e);
+        }
+
+        document.querySelectorAll('#navItems md-list-item').forEach((item) => {
+            item.addEventListener('click', () => {
+                const sheet = document.getElementById('side-sheet');
+                if (sheet && sheet.classList.contains('open') && typeof toggleSideSheet === 'function') {
+                    toggleSideSheet();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
